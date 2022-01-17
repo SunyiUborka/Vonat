@@ -20,7 +20,7 @@ namespace VonaaaaatAdmin
     /// </summary>
     public partial class MainWindow : Window
     {
-        AdminRepository db = new AdminRepository("Server=db.sunyiuborka.works;Port=9999;Database=Vonat;Uid=root;Pwd=Aa123456@;");
+        AdminRepository db = new AdminRepository("Server=localhost;Port=9999;Database=Vonat;Uid=root;Pwd=Aa123456@;");
         public MainWindow()
         {
             InitializeComponent();
