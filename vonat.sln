@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VonatAdmin", "VonatAdmin", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VonatPublic", "VonatPublic", "{91CCAD4F-3804-439A-8449-366957EF93CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatAdmin", "VonaaaaatAdmin\VonatAdmin.csproj", "{78F53639-DCCA-4D49-AB81-CA96255DC2C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatAdmin", "VonatAdmin\VonatAdmin.csproj", "{78F53639-DCCA-4D49-AB81-CA96255DC2C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatPublic", "VonaaaaatPublic\VonatPublic.csproj", "{259F8950-181F-45F8-9F92-9EFE2A11A251}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatPublic", "VonatPublic\VonatPublic.csproj", "{259F8950-181F-45F8-9F92-9EFE2A11A251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
