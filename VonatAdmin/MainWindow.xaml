@@ -1,12 +1,20 @@
-﻿<Window x:Class="VonaaaaatAdmin.MainWindow"
+﻿<Window x:Class="VonatAdmin.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VonaaaaatAdmin"
+        xmlns:local="clr-namespace:VonatAdmin"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Loaded="Grid_Loaded">
+        <Button Content="Belépés" HorizontalAlignment="Left" Margin="560,222,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label Content="Felhasználónév:" HorizontalAlignment="Left" Margin="462,164,0,0" VerticalAlignment="Top"/>
+        <Button Content="Regisztráció" HorizontalAlignment="Left" Margin="614,222,0,0" VerticalAlignment="Top"/>
+        <Label Content="Jelszó:" Margin="508,195,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="48"/>
+        <TextBox HorizontalAlignment="Left" Margin="560,168,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="560,199,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <GroupBox Header="GroupBox" Margin="27,92,389,134"/>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="88,31,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

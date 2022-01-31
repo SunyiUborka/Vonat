@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using VonaaaaatAdmin.Models;
+using VonatAdmin.Models;
 
-namespace VonaaaaatAdmin
+namespace VonatAdmin
 {
     class AdminDbContext : DbContext
     {
         public DbSet<Cities> cities { get; set; }
         public DbSet<Railways> railways { get; set; }
+        public DbSet<Users> users { get; set; }
         public AdminDbContext(DbContextOptions options) : base(options)
         {
 
@@ -20,6 +21,7 @@ namespace VonaaaaatAdmin
         {
             modelBuilder.Entity<Cities>().HasKey(s => s.Id);
             modelBuilder.Entity<Railways>().HasKey(s => s.Id);
+            modelBuilder.Entity<Users>().HasKey(s => s.email);
             base.OnModelCreating(modelBuilder);
         }
     }

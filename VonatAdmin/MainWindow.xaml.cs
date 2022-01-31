@@ -12,8 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using VonatAdmin.Models;
 
-namespace VonaaaaatAdmin
+
+namespace VonatAdmin
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,7 +31,32 @@ namespace VonaaaaatAdmin
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
+            if (File.Exists("railways.txt"))
+            {
+                StreamReader sr = new StreamReader("railways.txt");
 
+                while (!sr.EndOfStream)
+                {
+                    string[] d = sr.ReadLine().Split(';');
+                    var railway = new Railways();
+                    railway.from = d[0];
+                    railway.to = d[1];
+                    railway.distance = int.Parse(d[2]);
+                    db.AddRailway(railway);
+                }
+            }
+
+            if (File.Exists("cities.txt"))
+            {
+                StreamReader sr = new StreamReader("cities.txt");
+
+                while (!sr.EndOfStream)
+                {
+                    var city = new Cities();
+                    city.city = sr.ReadLine();
+                    db.AddCity(city);
+                }
+            }
         }
     }
 }
