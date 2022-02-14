@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VonatAdmin.Models
+namespace VonatCommon.Models
 {
-    class Railways
+    class AbstractBase
     {
+        public int Id { get; set; }
     }
 }

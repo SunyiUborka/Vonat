@@ -7,9 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VonatAdmin", "VonatAdmin", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VonatPublic", "VonatPublic", "{91CCAD4F-3804-439A-8449-366957EF93CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatAdmin", "VonatAdmin\VonatAdmin.csproj", "{78F53639-DCCA-4D49-AB81-CA96255DC2C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VonatAdmin", "VonatAdmin\VonatAdmin.csproj", "{78F53639-DCCA-4D49-AB81-CA96255DC2C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatPublic", "VonatPublic\VonatPublic.csproj", "{259F8950-181F-45F8-9F92-9EFE2A11A251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VonatPublic", "VonatPublic\VonatPublic.csproj", "{259F8950-181F-45F8-9F92-9EFE2A11A251}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VonatCommon", "VonatCommon", "{9975CD0F-0983-46BC-A607-073234B37CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatCommon", "VonatCommon\VonatCommon.csproj", "{4E53579C-DCE7-4FFA-BF28-C17A516964DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{259F8950-181F-45F8-9F92-9EFE2A11A251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{259F8950-181F-45F8-9F92-9EFE2A11A251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{259F8950-181F-45F8-9F92-9EFE2A11A251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E53579C-DCE7-4FFA-BF28-C17A516964DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E53579C-DCE7-4FFA-BF28-C17A516964DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E53579C-DCE7-4FFA-BF28-C17A516964DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E53579C-DCE7-4FFA-BF28-C17A516964DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{78F53639-DCCA-4D49-AB81-CA96255DC2C8} = {7D648E77-1554-4D32-A01F-58332D447310}
 		{259F8950-181F-45F8-9F92-9EFE2A11A251} = {91CCAD4F-3804-439A-8449-366957EF93CD}
+		{4E53579C-DCE7-4FFA-BF28-C17A516964DB} = {9975CD0F-0983-46BC-A607-073234B37CD5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E970A5C0-FC46-4E59-BEB4-2560FCB2151E}

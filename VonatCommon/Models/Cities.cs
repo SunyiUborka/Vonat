@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VonatAdmin.Models
+namespace VonatCommon.Models
 {
-    class Users
+    class Cities : AbstractBase
     {
+        public string city { get; set; }
     }
 }
