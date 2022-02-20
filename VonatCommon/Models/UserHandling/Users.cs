@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VonatCommon.Models
+namespace VonatCommon.Models.UserHandling
 {
-    class Users
+    class Users : AbstractBase
     {
         public string email { get; set; }
+        public string username { get; set; }
         public string password { get; set; }
-        public bool admin { get; set; }
+        public Role role { get; set; }
     }
 }
