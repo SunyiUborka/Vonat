@@ -37,7 +37,7 @@ namespace VonatAdmin.View
             try
             {
                 var user = loginController.HandleLoginAttempt(tbUsername.Text, tbPassword.Password);
-                RailwayPickerWindow railwayPicker = new RailwayPickerWindow(user.username);
+                RailwayPickerWindow railwayPicker = new RailwayPickerWindow();
                 railwayPicker.Left = this.Left;
                 railwayPicker.Top = this.Top;
                 RailwayPickerWindow.GetWindow(railwayPicker).Show();

@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VonatAdmin.View"
         mc:Ignorable="d"
-        Title="RailwayPickerWindow" Height="450" Width="800">
+        Title="RailwayPickerWindow"
+        Style="{StaticResource ResourceKey=BaseWindows}">
     <Grid>
-        
+        <Button Style="{StaticResource ResourceKey=LogoutButton}" Click="Button_Click">Kilépés</Button>
+        <ComboBox Margin="255,178,400,228" x:Name="cbFrom"/>
     </Grid>
 </Window>

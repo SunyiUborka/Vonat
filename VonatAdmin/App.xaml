@@ -28,6 +28,11 @@
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
         </Style>
+        <Style TargetType="Button" x:Key="BaseButton">
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="Background" Value="#2f3136"></Setter>
+            <Setter Property="Foreground" Value="#dcddde"></Setter>
+        </Style>
         <Style TargetType="Label" x:Key="lUsername" BasedOn="{StaticResource ResourceKey=BaseLabel}">
             <Setter Property="Margin" Value="0 0 600 80"></Setter>
         </Style>
@@ -58,11 +63,6 @@
         <Style TargetType="PasswordBox" BasedOn="{StaticResource ResourceKey=BasePasswordBox}" x:Key="tbPassword2">
             <Setter Property="Margin" Value="200 80 200 0"></Setter>
         </Style>
-        <Style TargetType="Button" x:Key="BaseButton">
-            <Setter Property="Height" Value="30"></Setter>
-            <Setter Property="Background" Value="#2f3136"></Setter>
-            <Setter Property="Foreground" Value="#dcddde"></Setter>
-        </Style>
         <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=BaseButton}" x:Key="LoginButton">
             <Setter Property="Height" Value="30"></Setter>
             <Setter Property="Margin" Value="200 280 410 100"></Setter>
@@ -70,6 +70,10 @@
         <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=BaseButton}" x:Key="RegisterButton">
             <Setter Property="Height" Value="30"></Setter>
             <Setter Property="Margin" Value="410 280 200 100"></Setter>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=BaseButton}" x:Key="LogoutButton">
+            <Setter Property="Margin" Value="650,10,10,360"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
         </Style>
     </Application.Resources>
 </Application>

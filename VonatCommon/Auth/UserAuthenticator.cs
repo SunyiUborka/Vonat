@@ -41,9 +41,14 @@ namespace VonatCommon.Auth
             {
                 throw new RailwayException.RailwayException("Hibás felhasználónév");
             }
+            
             if (!BCrypt.Net.BCrypt.Verify(password, user.password))
             {
                 throw new RailwayException.RailwayException("Hibás jelszó");
+            }
+            if (user.role != Role.ADMIN)
+            {
+                throw new RailwayException.RailwayException("Nincs jogosultságod!");
             }
             LoggedInUser = user;
             return user;
