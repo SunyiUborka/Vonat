@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VonatAdmin.Controller;
 using VonatCommon.Repository;
+using VonatCommon.Models;
 
 namespace VonatAdmin.View
 {
@@ -40,7 +41,9 @@ namespace VonatAdmin.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(railwayPicker.GetCities());
+            Cities s = new Cities();
+            s.city = "alma";
+            railwayPicker.AddCity(s);
             //railwayPicker.Logout();
         }
     }

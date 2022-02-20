@@ -30,13 +30,6 @@ namespace VonatAdmin.Controller
             authenticator.Logout();
         }
 
-        public void bruh()
-        {
-            var a = new Cities();
-            a.city = "alma";
-            vonat.Cities.Add(a);
-            vonat.SaveChanges();
-        }
         public List<Cities> GetCities()
         {
             var list = vonat.Cities.ToList();

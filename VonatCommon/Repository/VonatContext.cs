@@ -34,15 +34,5 @@ namespace VonatCommon.Repository
         {
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Vasuthalozat;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
-        }
-        public List<Cities> getCities()
-        {
-            var list = context.Cities.ToList();
-            return list;
-        }
     }
 }
