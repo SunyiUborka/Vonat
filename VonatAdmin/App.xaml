@@ -31,8 +31,11 @@
         <Style TargetType="Label" x:Key="lUsername" BasedOn="{StaticResource ResourceKey=BaseLabel}">
             <Setter Property="Margin" Value="0 0 600 80"></Setter>
         </Style>
-        <Style TargetType="Label" x:Key="lPassword" BasedOn="{StaticResource ResourceKey=BaseLabel}">
+        <Style TargetType="Label" x:Key="lPassword1" BasedOn="{StaticResource ResourceKey=BaseLabel}">
             <Setter Property="Margin" Value="0 0 600 0"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="lPassword2" BasedOn="{StaticResource ResourceKey=BaseLabel}">
+            <Setter Property="Margin" Value="0 80 600 0"></Setter>
         </Style>
         <Style TargetType="Label" x:Key="lEmail" BasedOn="{StaticResource ResourceKey=BaseLabel}">
             <Setter Property="Margin" Value="0 0 600 160"></Setter>
@@ -45,10 +48,15 @@
         </Style>
         <Style TargetType="PasswordBox" x:Key="BasePasswordBox">
             <Setter Property="Background" Value="#2f3136"></Setter>
-            <Setter Property="Margin" Value="200 0 200 0"></Setter>
             <Setter Property="Height" Value="30"></Setter>
             <Setter Property="FontSize" Value="20"></Setter>
             <Setter Property="Foreground" Value="#dcddde"></Setter>
+        </Style>
+        <Style TargetType="PasswordBox" BasedOn="{StaticResource ResourceKey=BasePasswordBox}" x:Key="tbPassword1">
+            <Setter Property="Margin" Value="200 0 200 0"></Setter>
+        </Style>
+        <Style TargetType="PasswordBox" BasedOn="{StaticResource ResourceKey=BasePasswordBox}" x:Key="tbPassword2">
+            <Setter Property="Margin" Value="200 80 200 0"></Setter>
         </Style>
         <Style TargetType="Button" x:Key="BaseButton">
             <Setter Property="Height" Value="30"></Setter>
@@ -57,11 +65,11 @@
         </Style>
         <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=BaseButton}" x:Key="LoginButton">
             <Setter Property="Height" Value="30"></Setter>
-            <Setter Property="Margin" Value="200 200 410 100"></Setter>
+            <Setter Property="Margin" Value="200 280 410 100"></Setter>
         </Style>
         <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=BaseButton}" x:Key="RegisterButton">
             <Setter Property="Height" Value="30"></Setter>
-            <Setter Property="Margin" Value="410 200 200 100"></Setter>
+            <Setter Property="Margin" Value="410 280 200 100"></Setter>
         </Style>
     </Application.Resources>
 </Application>

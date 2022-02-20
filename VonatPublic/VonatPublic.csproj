@@ -25,5 +25,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-
+<ItemGroup>
+    <ProjectReference Include="..\VonatCommon\VonatCommon.csproj" />
+  </ItemGroup>
 </Project>

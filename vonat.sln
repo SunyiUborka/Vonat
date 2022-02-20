@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VonatPublic", "VonatPublic\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VonatCommon", "VonatCommon", "{9975CD0F-0983-46BC-A607-073234B37CD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonatCommon", "VonatCommon\VonatCommon.csproj", "{4E53579C-DCE7-4FFA-BF28-C17A516964DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VonatCommon", "VonatCommon\VonatCommon.csproj", "{4E53579C-DCE7-4FFA-BF28-C17A516964DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

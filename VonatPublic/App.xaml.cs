@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace VonaaaaatPublic
+namespace VonatPublic
 {
     /// <summary>
     /// Interaction logic for App.xaml

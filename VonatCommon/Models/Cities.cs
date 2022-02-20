@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VonatCommon.Models
 {
-    class Cities : AbstractBase
+    public class Cities : AbstractBase
     {
         public string city { get; set; }
     }

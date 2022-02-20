@@ -6,9 +6,6 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.3" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="View\LoginWindow.xaml.cs">
@@ -29,5 +26,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\VonatCommon\VonatCommon.csproj" />
+	</ItemGroup>
 </Project>

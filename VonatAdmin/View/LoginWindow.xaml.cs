@@ -11,17 +11,51 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VonatAdmin.Controller;
+using VonatCommon.RailwayException;
 
-namespace VonatPublic.View
+namespace VonatAdmin.View
 {
     /// <summary>
     /// Interaction logic for LoginWindow.xaml
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private LoginController loginController = new LoginController();
         public LoginWindow()
         {
             InitializeComponent();
+        }
+
+        public LoginWindow(string usernameText) : this()
+        {
+            tbUsername.Text = usernameText;
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var user = loginController.HandleLoginAttempt(tbUsername.Text, tbPassword.Password);
+                RailwayPickerWindow railwayPicker = new RailwayPickerWindow(user.username);
+                railwayPicker.Left = this.Left;
+                railwayPicker.Top = this.Top;
+                RailwayPickerWindow.GetWindow(railwayPicker).Show();
+                this.Close();
+            }
+            catch (RailwayException exc)
+            {
+                MessageBox.Show(exc.Message, "Sikertelen bejelentkezés", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Left = this.Left;
+            registerWindow.Top = this.Top;
+            RegisterWindow.GetWindow(registerWindow).Show();
+            this.Close();
         }
     }
 }

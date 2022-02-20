@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VonatCommon.Models
 {
-    class Railways : AbstractBase
+    public class Railways : AbstractBase
     {
         public string from { get; set; }
         public string to { get; set; }

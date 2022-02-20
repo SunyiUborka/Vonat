@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VonatCommon.Models
+namespace VonatPublic.Controller
 {
-    public abstract class AbstractBase
+    class LoginController
     {
-        public int Id { get; set; }
     }
 }
