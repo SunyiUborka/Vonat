@@ -25,8 +25,6 @@ namespace VonatAdmin.View
         public LoginWindow()
         {
             InitializeComponent();
-            NewCityPicker newCity = new NewCityPicker();
-            NewCityPicker.GetWindow(newCity).ShowDialog();
         }
 
         public LoginWindow(string usernameText) : this()

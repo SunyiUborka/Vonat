@@ -107,5 +107,23 @@
         <Style TargetType="TextBox" BasedOn="{StaticResource ResourceKey=BaseTextBox}" x:Key="AddCityInput">
             <Setter Property="Margin" Value="20 10 20 120"/>
         </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=BaseButton}" x:Key="NewCity">
+            <Setter Property="Margin" Value="560,0,120,360"></Setter>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource BaseButton}" x:Key="NewRailway">
+            <Setter Property="Margin" Value="450,0,230,360"/>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource BaseButton}" x:Key="Update">
+            <Setter Property="Margin" Value="340,0,340,360"/>
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource BaseTextBox}" x:Key="TbFrom">
+            <Setter Property="Margin" Value="200 0 200 80"></Setter>
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource BaseTextBox}" x:Key="TbTo">
+            <Setter Property="Margin" Value="200 0 200 0"></Setter>
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource BaseTextBox}" x:Key="TbDis">
+            <Setter Property="Margin" Value="200 80 200 0"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

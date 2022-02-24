@@ -1,0 +1,16 @@
+﻿<Window x:Class="VonatAdmin.View.NewRailway"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:VonatAdmin.View"
+        mc:Ignorable="d"
+        Title="NewRailway" Style="{StaticResource ResourceKey=BaseWindows}">
+    <Grid>
+        <TextBox x:Name="TbFrom" Style="{StaticResource TbFrom}"/>
+        <TextBox x:Name="TbTo" Style="{StaticResource TbTo}"/>
+        <TextBox x:Name="TbDis" Style="{StaticResource TbDis}"/>
+        <Button x:Name="AddRailway" Style="{StaticResource LoginButton}" Content="Hozzáadás" Click="AddRailway_OnClick"/>
+        <Button x:Name="Back" Style="{StaticResource RegisterButton}" Content="Mégse"/>
+    </Grid>
+</Window>

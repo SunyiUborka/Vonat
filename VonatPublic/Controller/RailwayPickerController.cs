@@ -32,8 +32,7 @@ namespace VonatPublic.Controller
 
         public List<Cities> GetCities()
         {
-            var list = vonat.Cities.ToList();
-            return list;
+            return vonat.Cities.ToList();;
         }
         public void AddCity(Cities city)
         {

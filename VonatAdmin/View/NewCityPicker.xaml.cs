@@ -35,7 +35,7 @@ namespace VonatAdmin.View
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var s = vonat.Cities.FirstOrDefault(r => r.city == AddCityInput.Text);
+            var s = vonat.Cities.FirstOrDefault(r => r.city.ToLower() == AddCityInput.Text.ToLower());
 
             if (s == null)
             {
