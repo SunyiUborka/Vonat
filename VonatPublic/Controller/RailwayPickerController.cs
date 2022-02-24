@@ -8,7 +8,7 @@ using VonatCommon.Auth;
 using VonatCommon.Repository;
 using VonatCommon.Models;
 
-namespace VonatAdmin.Controller
+namespace VonatPublic.Controller
 {
     public class RailwayPickerController
     {

@@ -8,10 +8,15 @@
         Title="RegisterWindow"
         Style="{ StaticResource ResourceKey=BaseWindows}">
     <Grid>
-        <TextBox Style="{StaticResource ResourceKey=tbUsername}"/>
-        <TextBox Style="{StaticResource ResourceKey=tbEmail}"/>
-        <PasswordBox Style="{StaticResource ResourceKey=BasePasswordBox}"/>
-        <Button Content="Mégse" Style="{StaticResource ResourceKey=RegisterButton}"/>
-        <Button Content="Regisztrálás" Style="{StaticResource ResourceKey=LoginButton}"/>
+        <TextBox Style="{StaticResource ResourceKey=tbUsername}" x:Name="tbUsername"/>
+        <TextBox Style="{StaticResource ResourceKey=tbEmail}" x:Name="tbEmail"/>
+        <PasswordBox Style="{StaticResource ResourceKey=tbPassword1}" x:Name="tbPassword1"/>
+        <PasswordBox Style="{StaticResource ResourceKey=tbPassword2}" x:Name="tbPassword2"/>
+        <Button Content="Mégse" Style="{StaticResource ResourceKey=RegisterButton}" Click="Button_Click_2"/>
+        <Button Content="Regisztrálás" Style="{StaticResource ResourceKey=LoginButton}" Click="Button_Click"/>
+        <Label Content="Felhasználónév" Style="{StaticResource ResourceKey=lUsername}" />
+        <Label Content="Jelszó" Style="{StaticResource ResourceKey=lPassword1}"/>
+        <Label Content="Jelszó újra" Style="{StaticResource ResourceKey=lPassword2}"/>
+        <Label Content="Email" Style="{StaticResource ResourceKey=lEmail}"/>
     </Grid>
 </Window>

@@ -11,11 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using VonatAdmin.Controller;
+using VonatPublic.Controller;
 using VonatCommon.Repository;
 using VonatCommon.Models;
 
-namespace VonatAdmin.View
+namespace VonatPublic.View
 {
     /// <summary>
     /// Interaction logic for RailwayPickerWindow.xaml
@@ -27,6 +27,11 @@ namespace VonatAdmin.View
         {
             InitializeComponent();
             railwayPicker.SubscibeToLogout(UserAuthenticator_LogoutEvent);
+            foreach (var item in railwayPicker.GetCities())
+            {
+                cbFrom.Items.Add(item.city);
+                cbTo.Items.Add(item.city);
+            }
         }
 
         private void UserAuthenticator_LogoutEvent()
@@ -41,10 +46,7 @@ namespace VonatAdmin.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Cities s = new Cities();
-            s.city = "alma";
-            railwayPicker.AddCity(s);
-            //railwayPicker.Logout();
+            railwayPicker.Logout();
         }
     }
 }

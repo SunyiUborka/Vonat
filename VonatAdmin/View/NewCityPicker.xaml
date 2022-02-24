@@ -1,0 +1,15 @@
+﻿<Window x:Class="VonatAdmin.View.NewCityPicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VonatAdmin.View"
+        mc:Ignorable="d"
+        Title="NewCityPicker"
+        Style="{StaticResource ResourceKey=AddCityWindow}">
+    <Grid>
+        <Button Content="Hozzáadás" Style="{StaticResource ResourceKey=AddCity}" Click="Button_Click_1"/>
+        <Button Content="Mégse" Style="{StaticResource ResourceKey=AddCityBack}" Click="Button_Click"/>
+        <TextBox x:Name="AddCityInput" Style="{StaticResource ResourceKey=AddCityInput}"/>
+    </Grid>
+</Window>

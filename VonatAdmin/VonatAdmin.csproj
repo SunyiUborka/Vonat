@@ -6,7 +6,6 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-
   <ItemGroup>
     <Compile Update="View\LoginWindow.xaml.cs">
       <SubType>Code</SubType>

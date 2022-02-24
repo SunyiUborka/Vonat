@@ -25,6 +25,8 @@ namespace VonatAdmin.View
         public LoginWindow()
         {
             InitializeComponent();
+            NewCityPicker newCity = new NewCityPicker();
+            NewCityPicker.GetWindow(newCity).ShowDialog();
         }
 
         public LoginWindow(string usernameText) : this()
@@ -37,10 +39,10 @@ namespace VonatAdmin.View
             try
             {
                 var user = loginController.HandleLoginAttempt(tbUsername.Text, tbPassword.Password);
-                RailwayPickerWindow railwayPicker = new RailwayPickerWindow();
+                AdminRailways railwayPicker = new AdminRailways();
                 railwayPicker.Left = this.Left;
                 railwayPicker.Top = this.Top;
-                RailwayPickerWindow.GetWindow(railwayPicker).Show();
+                AdminRailways.GetWindow(railwayPicker).Show();
                 this.Close();
             }
             catch (RailwayException exc)
