@@ -46,10 +46,6 @@ namespace VonatCommon.Auth
             {
                 throw new RailwayException.RailwayException("Hibás jelszó");
             }
-            if (user.role != Role.ADMIN)
-            {
-                throw new RailwayException.RailwayException("Nincs jogosultságod!");
-            }
             LoggedInUser = user;
             return user;
         }

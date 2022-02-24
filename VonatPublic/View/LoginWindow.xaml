@@ -9,10 +9,10 @@
         Style="{StaticResource ResourceKey=BaseWindows}">
     <Grid>
         <TextBox Style="{StaticResource ResourceKey=tbUsername}" x:Name="tbUsername"/>
-        <PasswordBox Style="{StaticResource ResourceKey=BasePasswordBox}" x:Name="tbPassword"/>
-        <Button Content="Belépés" x:Name="btnLogin" Style="{StaticResource ResourceKey=LoginButton}"/>
-        <Button Content="Regisztráció" x:Name="btnRegister" Style="{StaticResource ResourceKey=RegisterButton}"/>
+        <PasswordBox Style="{StaticResource ResourceKey=tbPassword1}" x:Name="tbPassword"/>
+        <Button Content="Belépés" x:Name="btnLogin" Style="{StaticResource ResourceKey=LoginButton}" Click="btnLogin_Click"/>
+        <Button Content="Regisztráció" x:Name="btnRegister" Style="{StaticResource ResourceKey=RegisterButton}" Click="btnRegister_Click"/>
         <Label Content="Felhasználónév" Style="{StaticResource ResourceKey=lUsername}" />
-        <Label Content="Jelszó" Style="{StaticResource ResourceKey=lPassword}"/>
+        <Label Content="Jelszó" Style="{StaticResource ResourceKey=lPassword1}"/>
     </Grid>
 </Window>
