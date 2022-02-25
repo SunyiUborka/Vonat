@@ -39,7 +39,7 @@ namespace VonatAdmin.View
 
             if (s == null)
             {
-                vonat.AddCity(new Cities()
+                vonat.CreateCity(new Cities()
                 {
                     city = AddCityInput.Text
                 });

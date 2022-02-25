@@ -35,10 +35,48 @@ namespace VonatCommon.Repository
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Vonat;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
 
-        public void AddCity(Cities city)
+        public void CreateCity(Cities city)
         {
-            context.Cities.Add(city);
-            context.SaveChanges();
+            Instance.Cities.Add(city);
+            Instance.SaveChanges();
+        }
+
+        public void UpdateCity(Cities city)
+        {
+
+        }
+
+        public void DeleteCity(Cities city)
+        {
+            Instance.Cities.Remove(city);
+            Instance.SaveChanges();
+        }
+
+        public Cities GetCity(Cities city)
+        {
+            return city;
+        }
+
+        public void CreateRailway(Railways railway)
+        {
+            Instance.Railways.Add(railway);
+            Instance.SaveChanges();
+        }
+
+        public void UpdateRailways(Railways railway)
+        {
+
+        }
+
+        public void DeleteRailways(Railways railway)
+        {
+            Instance.Remove(railway);
+            Instance.SaveChanges();
+        }
+
+        public Railways GetRailways(Railways railway)
+        {
+            return railway;
         }
     }
 }

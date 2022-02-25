@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AdminRailways" Style="{StaticResource ResourceKey=BaseWindows}">
     <Grid>
-        <Button Style="{StaticResource ResourceKey=LogoutButton}" Content="Kilépés"/>
+        <Button Style="{StaticResource ResourceKey=LogoutButton}" Content="Kilépés" Click="Button_Click"/>
         <Button Content="Új város" Style="{StaticResource ResourceKey=NewCity}" x:Name="NewCity" Click="NewCity_OnClick"></Button>
         <Button Content="Új útvonal" Style="{StaticResource NewRailway}" x:Name="NewRailway" Click="NewRailway_OnClick" />
         <Button Content="Frissítés" Style="{StaticResource Update}" x:Name="Update" Click="Update_OnClick"/>

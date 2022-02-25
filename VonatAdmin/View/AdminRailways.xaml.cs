@@ -14,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VonatCommon.Models;
 using VonatCommon.Repository;
+using VonatCommon.Models.UserHandling;
+using VonatAdmin.Controller;
+using VonatCommon.Auth;
 
 namespace VonatAdmin.View
 {
@@ -23,9 +26,11 @@ namespace VonatAdmin.View
     public partial class AdminRailways : Window
     {
         private VonatContext vonat = VonatContext.Instance;
+        private RailwayController railwayController = new RailwayController();
         public AdminRailways()
         {
             InitializeComponent();
+            railwayController.SubscibeToLogout(UserAuthenticator_LogoutEvent);
         }
 
         private void NewCity_OnClick(object sender, RoutedEventArgs e)
@@ -78,6 +83,19 @@ namespace VonatAdmin.View
                     }
                 }
             }
+        }
+
+        private void UserAuthenticator_LogoutEvent()
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Left = this.Left;
+            loginWindow.Top = this.Top;
+            LoginWindow.GetWindow(loginWindow).Show();
+            railwayController.UnsubscribeFromLogout(UserAuthenticator_LogoutEvent);
+            this.Close();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
