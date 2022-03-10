@@ -7,10 +7,13 @@
         mc:Ignorable="d"
         Title="NewRailway" Style="{StaticResource ResourceKey=BaseWindows}">
     <Grid>
-        <TextBox x:Name="TbFrom" Style="{StaticResource TbFrom}"/>
-        <TextBox x:Name="TbTo" Style="{StaticResource TbTo}"/>
+        <ComboBox x:Name="cbTo" Style="{StaticResource cbAFrom}"></ComboBox>
+        <ComboBox x:Name="cbFrom" Style="{StaticResource cbATo}"></ComboBox>
         <TextBox x:Name="TbDis" Style="{StaticResource TbDis}"/>
         <Button x:Name="AddRailway" Style="{StaticResource LoginButton}" Content="Hozzáadás" Click="AddRailway_OnClick"/>
-        <Button x:Name="Back" Style="{StaticResource RegisterButton}" Content="Mégse"/>
+        <Button x:Name="Back" Style="{StaticResource RegisterButton}" Content="Vissza" Click="Back_OnClick"/>
+        <Label Style="{StaticResource lPassword1}" Content="Hová"/>
+        <Label Style="{StaticResource lUsername}" Content="Honnan"></Label>
+        <Label Style="{StaticResource lPassword2}" Content="Távolság"></Label>
     </Grid>
 </Window>

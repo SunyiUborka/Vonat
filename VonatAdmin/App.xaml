@@ -60,6 +60,24 @@
         <Style TargetType="PasswordBox" BasedOn="{StaticResource ResourceKey=BasePasswordBox}" x:Key="tbPassword1">
             <Setter Property="Margin" Value="200 0 200 0"></Setter>
         </Style>
+        <Style TargetType="ComboBox" x:Key="cbBase">
+            <Setter Property="Background" Value="#36393f"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+        </Style>
+        <Style TargetType="ListViewItem">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Background" Value="#36393f"/>
+        </Style>
+        <Style TargetType="ComboBox" BasedOn="{StaticResource cbBase}" x:Key="cbAFrom">
+            <Setter Property="Margin" Value="200 0 200 0"></Setter>
+        </Style>
+        <Style TargetType="ComboBox" BasedOn="{StaticResource cbBase}" x:Key="cbATo">
+            <Setter Property="Margin" Value="200 0 200 80"></Setter>
+        </Style>
         <Style TargetType="PasswordBox" BasedOn="{StaticResource ResourceKey=BasePasswordBox}" x:Key="tbPassword2">
             <Setter Property="Margin" Value="200 80 200 0"></Setter>
         </Style>
@@ -114,7 +132,13 @@
             <Setter Property="Margin" Value="450,0,230,360"/>
         </Style>
         <Style TargetType="Button" BasedOn="{StaticResource BaseButton}" x:Key="Update">
+            <Setter Property="Margin" Value="120,0,560,360"/>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource BaseButton}" x:Key="Delete">
             <Setter Property="Margin" Value="340,0,340,360"/>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource BaseButton}" x:Key="Edit">
+            <Setter Property="Margin" Value="230,0,450,360"/>
         </Style>
         <Style TargetType="TextBox" BasedOn="{StaticResource BaseTextBox}" x:Key="TbFrom">
             <Setter Property="Margin" Value="200 0 200 80"></Setter>

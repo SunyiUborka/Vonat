@@ -43,7 +43,9 @@ namespace VonatCommon.Repository
 
         public void UpdateCity(Cities city)
         {
-
+            var s = Instance.Cities.FirstOrDefault(r => r.Id == city.Id);
+            s.city = city.city;
+            Instance.SaveChanges();
         }
 
         public void DeleteCity(Cities city)
@@ -65,7 +67,9 @@ namespace VonatCommon.Repository
 
         public void UpdateRailways(Railways railway)
         {
-
+            var s = Instance.Railways.FirstOrDefault(r => r.Id == railway.Id);
+            s = railway;
+            Instance.SaveChanges();
         }
 
         public void DeleteRailways(Railways railway)
@@ -77,6 +81,17 @@ namespace VonatCommon.Repository
         public Railways GetRailways(Railways railway)
         {
             return railway;
+        }
+
+        public List<Cities> GetCities()
+        {
+            var list = Instance.Cities.ToList();
+            return list;
+        }
+        public List<Railways> GetRailways()
+        {
+            var list = Instance.Railways.ToList();
+            return list;
         }
     }
 }

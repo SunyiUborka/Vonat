@@ -8,13 +8,18 @@
         Title="AdminRailways" Style="{StaticResource ResourceKey=BaseWindows}">
     <Grid>
         <Button Style="{StaticResource ResourceKey=LogoutButton}" Content="Kilépés" Click="Button_Click"/>
-        <Button Content="Új város" Style="{StaticResource ResourceKey=NewCity}" x:Name="NewCity" Click="NewCity_OnClick"></Button>
+        <Button Content="Új város" Style="{StaticResource ResourceKey=NewCity}" x:Name="NewCity" Click="NewCity_OnClick"/>
         <Button Content="Új útvonal" Style="{StaticResource NewRailway}" x:Name="NewRailway" Click="NewRailway_OnClick" />
         <Button Content="Frissítés" Style="{StaticResource Update}" x:Name="Update" Click="Update_OnClick"/>
-        <ListView Style="{StaticResource ResourceKey=SelectedView}">
+        <Button Content="Törlés" Style="{StaticResource Delete}" x:Name="DeleteRailway"/>
+        <Button Content="Módosítás" Style="{StaticResource Edit}" x:Name="EditRailway" Click="EditRailway_OnClick"/>
+        <ListView Style="{StaticResource ResourceKey=SelectedView}" x:Name="ListView">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" Width="50"/>
+                    <GridViewColumn Header="Honnan" DisplayMemberBinding="{Binding from}" Width="300"/>
+                    <GridViewColumn Header="Hová" DisplayMemberBinding="{Binding to}" Width="300"/>
+                    <GridViewColumn Header="Távolság" DisplayMemberBinding="{Binding distance}" Width="50"/>
                 </GridView>
             </ListView.View>
         </ListView>

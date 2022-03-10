@@ -1,22 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using VonatCommon.Models;
 using VonatCommon.Repository;
-using VonatCommon.Models.UserHandling;
 using VonatAdmin.Controller;
-using VonatCommon.Auth;
 
 namespace VonatAdmin.View
 {
@@ -30,6 +18,7 @@ namespace VonatAdmin.View
         public AdminRailways()
         {
             InitializeComponent();
+            ListView.ItemsSource = vonat.GetRailways();
             railwayController.SubscibeToLogout(UserAuthenticator_LogoutEvent);
         }
 
@@ -58,9 +47,8 @@ namespace VonatAdmin.View
                     var s = vonat.Cities.FirstOrDefault(r => r.city.ToLower() == h.ToLower());
                     if (s == null)
                     {
-                        vonat.Cities.Add(new Cities(){city = h});
+                        vonat.CreateCity(new Cities(){city = h});
                     }
-                    vonat.SaveChanges();
                 }
             }
             
@@ -73,16 +61,16 @@ namespace VonatAdmin.View
                     var s = vonat.Railways.FirstOrDefault(r => r.from.ToLower() == h[0].ToLower() && r.to.ToLower() == h[1].ToLower() || r.from.ToLower() == h[1].ToLower() && r.to.ToLower() == h[0].ToLower());
                     if (s == null)
                     {
-                        vonat.Railways.Add(new Railways()
+                        vonat.CreateRailway(new Railways()
                         {
                             from = h[0],
                             to = h[1],
                             distance = int.Parse(h[2])
                         });
-                        vonat.SaveChanges();
                     }
                 }
             }
+            ListView.ItemsSource = vonat.GetRailways();
         }
 
         private void UserAuthenticator_LogoutEvent()
@@ -90,12 +78,18 @@ namespace VonatAdmin.View
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Left = this.Left;
             loginWindow.Top = this.Top;
-            LoginWindow.GetWindow(loginWindow).Show();
+            loginWindow.Show();
             railwayController.UnsubscribeFromLogout(UserAuthenticator_LogoutEvent);
             this.Close();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            railwayController.Logout();
+        }
+
+        private void EditRailway_OnClick(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

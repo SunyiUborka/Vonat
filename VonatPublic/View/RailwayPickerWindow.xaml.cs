@@ -23,6 +23,7 @@ namespace VonatPublic.View
     public partial class RailwayPickerWindow : Window
     {
         private RailwayPickerController railwayPicker = new RailwayPickerController();
+        private VonatContext vonat = VonatContext.Instance;
         public RailwayPickerWindow()
         {
             InitializeComponent();
@@ -47,6 +48,26 @@ namespace VonatPublic.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             railwayPicker.Logout();
+        }
+
+        private void cbTo_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListView.Items.Clear();
+            if (cbFrom.SelectedIndex != null)
+            {
+                var s = vonat.Railways.FirstOrDefault(r => r.from.ToLower() == cbFrom.SelectedItem.ToString().ToLower() && r.to.ToLower() == cbTo.SelectedItem.ToString().ToLower() || r.from.ToLower() == cbTo.SelectedItem.ToString().ToLower() && r.to.ToLower() == cbFrom.SelectedItem.ToString().ToLower());
+                ListView.Items.Add(s);
+            }
+        }
+
+        private void CbFrom_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListView.Items.Clear();
+            if (cbFrom.SelectedIndex != null)
+            {
+                var s = vonat.Railways.FirstOrDefault(r => r.from.ToLower() == cbFrom.SelectedItem.ToString().ToLower() && r.to.ToLower() == cbTo.SelectedItem.ToString().ToLower() || r.from.ToLower() == cbTo.SelectedItem.ToString().ToLower() && r.to.ToLower() == cbFrom.SelectedItem.ToString().ToLower());
+                ListView.Items.Add(s);
+            }
         }
     }
 }

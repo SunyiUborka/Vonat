@@ -9,9 +9,9 @@
         Style="{StaticResource ResourceKey=BaseWindows}">
     <Grid>
         <Button Style="{StaticResource ResourceKey=LogoutButton}" Click="Button_Click">Kilépés</Button>
-        <ComboBox x:Name="cbFrom" Style="{StaticResource ResourceKey=cbFrom}"/>
-        <ComboBox x:Name="cbTo" Style="{StaticResource ResourceKey=cbTo}"/>
-        <ListView Style="{StaticResource ResourceKey=SelectedView}">
+        <ComboBox x:Name="cbFrom" Style="{StaticResource ResourceKey=cbFrom}" SelectionChanged="CbFrom_OnSelectionChanged"/>
+        <ComboBox x:Name="cbTo" Style="{StaticResource ResourceKey=cbTo}" SelectionChanged="cbTo_OnSelectionChanged"/>
+        <ListView Style="{StaticResource ResourceKey=SelectedView}" x:Name="ListView">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
